@@ -6,6 +6,7 @@
   padding: 0;
   font-size: 16px;
   font-family: inter;
+  scroll-behavior: smooth;
   scrollbar-width: thin;
   scrollbar-color: #0B98E8 #FFFFFF;
 }

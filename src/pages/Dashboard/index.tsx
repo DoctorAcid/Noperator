@@ -11,6 +11,7 @@ import Title from '../../components/Title/Title'
 import Deploy from './Deploy'
 import Strategies from '../../components/Card/Strategies'
 import { SecondaryButton } from '../../components/Buttons/Buttons'
+import HorizoantalScroll from '../../components/HorizoantalScroll/HorizoantalScroll'
 
 const Wrapper = styled.div`
   display: flex;
@@ -141,7 +142,7 @@ const ScrollWrap = styled.div`
     width: 100%;
 `
 
-const HorizontalScroll = styled.div`
+const HorizontalScrolla = styled.div`
     position: absolute;
     display: flex;
     gap: 16px;
@@ -178,21 +179,11 @@ const Dashboard = () => {
   }
 
   const scroll = () => {
-    console.log('clicked')
-    let scrollAmount = 0
-    const current = ref.current
-    if (current) {
-      const slideTimer = setInterval(() => {
-        current.scrollLeft += -20
-        scrollAmount += Math.abs(-20)
-        if (scrollAmount >= 100) {
-          clearInterval(slideTimer)
-        }
-      }, 10)
+    if (ref.current) {
+      ref.current.scrollLeft += -260
+      console.log(ref.current.scrollLeft)
     }
   }
-
-  const current = ref.current
 
   return (
     <Wrapper>
@@ -234,43 +225,50 @@ const Dashboard = () => {
             </ContentWrap>
           </ColumnContainer>
           <Title titleName='Discover Strategies'/>
-          <ScrollWrap style={{height: (height ? (String(height) + 'px') : '')}}>
-            <Shader style={{height : (height ? (String(height) + 'px') : ''), display: (isScroll ? 'flex' : 'none')}} />
-            <RArrow onClick={() => {scroll()}}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M9.72848 20.7863C9.01811 20.36 8.78777 19.4386 9.21399 18.7283L13.2509 12L9.21399 5.27176C8.78777 4.56139 9.01811 3.64 9.72848 3.21378C10.4389 2.78756 11.3602 3.0179 11.7865 3.72827L16.7495 12L11.7865 20.2718C11.3602 20.9821 10.4389 21.2125 9.72848 20.7863Z" fill="#495057"/>
-              </svg>
-            </RArrow>
-            <HorizontalScroll ref={ref}>
+          <HorizoantalScroll>
+            <React.Fragment>
               <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>              
-            </HorizontalScroll>
-          </ScrollWrap>
+              <Strategies title='No Shit' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='What the fuck' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='jkband and RSI' stocks={22} date='10 Nov 2022'/>
+            </React.Fragment>
+          </HorizoantalScroll>
           <Title titleName='Discover Scanners'/>
-          <ScrollWrap style={{height: (height ? (String(height) + 'px') : '')}}>
-            <Shader style={{height : (height ? (String(height) + 'px') : ''), display: (isScroll ? 'flex' : 'none')}} />
-            <HorizontalScroll ref={ref}>
+          <HorizoantalScroll>
+            <React.Fragment>
               <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>              
-            </HorizontalScroll>
-          </ScrollWrap>
+              <Strategies title='No Shit' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='What the fuck' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='ADSF jbviaur g' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='asdfasd and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='gfs g dfvnd and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Boasdf and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='afd vafd and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='hkj nd and RSI' stocks={22} date='10 Nov 2022'/>
+            </React.Fragment>
+          </HorizoantalScroll>
           <Title titleName='All Stocks'/>
-          <ScrollWrap style={{height: (height ? (String(height) + 'px') : '')}}>
-            <Shader style={{height : (height ? (String(height) + 'px') : ''), display: (isScroll ? 'flex' : 'none')}} />
-            <HorizontalScroll ref={ref}>
+          <HorizoantalScroll>
+            <React.Fragment>
               <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>
-              <Strategies title='We have Nothing' stocks={10} date='12 Dec 2022'/>              
-            </HorizontalScroll>
-          </ScrollWrap>
+              <Strategies title='No Shit' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='What the fuck' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='ADSF jbviaur g' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='asdfasd and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='gfs g dfvnd and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Boasdf and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='afd vafd and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+              <Strategies title='hkj nd and RSI' stocks={22} date='10 Nov 2022'/>
+            </React.Fragment>
+          </HorizoantalScroll>
         </ColumnContainer>
         <ColumnContainer width='20%' style={{minWidth: '374px'}}>
           <SidePanel/>
