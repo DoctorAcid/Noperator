@@ -114,10 +114,11 @@ const HorizoantalScroll = ({children}: Props) => {
             if (scrollAmount >= 100) {
                 clearInterval(sliderTimer)
             }
-            console.log(current.scrollLeft)
         }, 25)
       }
     }
+
+    
     const scrollL = () => {
         const current = ref.current
       if (current) {
@@ -128,7 +129,6 @@ const HorizoantalScroll = ({children}: Props) => {
             if (scrollAmount >= 100) {
                 clearInterval(sliderTimer)
             }
-            console.log(current.scrollLeft)
         }, 25)
       }
     }
