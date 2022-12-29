@@ -1,0 +1,31 @@
+*{
+    text-decoration: none;
+}
+
+.active {
+    background-color: #0B98E8;
+    transition: all ease-out .3s;
+}
+
+.active svg path{
+    fill: #FFFFFF;
+    transition: all ease-out .5s;
+}
+
+.active span {
+    color: #FFFFFF;
+    font-weight: 700;
+}
+
+.categories:hover {
+    background-color: #0B98E80D;
+    color: #0B98E8;
+    font-weight: 700;
+    transition: all ease-out .3s;
+}
+    
+.categories:hover svg path {
+    fill: #0B98E8;
+    transition: all ease-out .5s;
+}
+        

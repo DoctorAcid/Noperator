@@ -1,0 +1,38 @@
+.table_wrap{
+    position: relative;
+    bottom: 0;
+    border: 2px solid green;
+}
+
+.table_responsive{
+    position: absolute;
+    overflow-x: auto;
+    width: 100%;
+    padding-bottom: 16px;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    text-align: right;
+}
+
+table thead tr th{
+    width: max-content;
+    padding: 4px 24px;
+    color: #ADB5BD;
+}
+
+table tr th:first-child{
+    text-align: left;
+}
+
+table tbody tr th {
+    width: max-content;
+    padding: 8px 24px;
+    color: #495057;
+}
+
+.first_child tr th {
+    padding-top: 16px;
+}
