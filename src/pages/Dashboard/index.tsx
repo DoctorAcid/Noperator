@@ -249,6 +249,7 @@ const Dashboard = () => {
               <Strategies title='afd vafd and RSI' stocks={22} date='10 Nov 2022'/>
               <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
               <Strategies title='hkj nd and RSI' stocks={22} date='10 Nov 2022'/>
+              <div style={{display: 'flex', width: '128px'}}></div>
             </React.Fragment>
           </HorizoantalScroll>
           <Title titleName='All Stocks'/>
