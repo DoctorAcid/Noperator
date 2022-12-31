@@ -12,6 +12,8 @@ import Deploy from './Deploy'
 import Strategies from '../../components/Card/Strategies'
 import { SecondaryButton } from '../../components/Buttons/Buttons'
 import HorizoantalScroll from '../../components/HorizoantalScroll/HorizoantalScroll'
+import Scanner from '../../components/Card/Scanner'
+import Stock from '../../components/Card/Stock'
 
 const Wrapper = styled.div`
   display: flex;
@@ -224,52 +226,45 @@ const Dashboard = () => {
               <Deploy />
             </ContentWrap>
           </ColumnContainer>
-          <Title titleName='Discover Strategies'/>
-          <HorizoantalScroll>
-            <React.Fragment>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='No Shit' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='What the fuck' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='jkband and RSI' stocks={22} date='10 Nov 2022'/>
-            </React.Fragment>
-          </HorizoantalScroll>
-          <Title titleName='Discover Scanners'/>
-          <HorizoantalScroll>
-            <React.Fragment>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='No Shit' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='What the fuck' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='ADSF jbviaur g' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='asdfasd and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='gfs g dfvnd and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Boasdf and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='afd vafd and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='hkj nd and RSI' stocks={22} date='10 Nov 2022'/>
-              <div style={{display: 'flex', width: '128px'}}></div>
-            </React.Fragment>
-          </HorizoantalScroll>
-          <Title titleName='All Stocks'/>
-          <HorizoantalScroll>
-            <React.Fragment>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='No Shit' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='What the fuck' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='ADSF jbviaur g' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='asdfasd and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='gfs g dfvnd and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Boasdf and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='afd vafd and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
-              <Strategies title='hkj nd and RSI' stocks={22} date='10 Nov 2022'/>
-            </React.Fragment>
-          </HorizoantalScroll>
+          <ColumnContainer gap='md'>
+            <Title titleName='Discover Strategies'/>
+            <HorizoantalScroll>
+              <React.Fragment>
+                <Strategies title='Bolling band and RSI' stocks={22} date='10 Nov 2022'/>
+                <Strategies title='Nothing Spaecial' stocks={22} date='10 Nov 2022'/>
+                <Strategies title='Sky Rocketing' stocks={22} date='10 Nov 2022'/>
+                <Strategies title='jkband and RSI' stocks={22} date='10 Nov 2022'/>
+              </React.Fragment>
+            </HorizoantalScroll>
+          </ColumnContainer>
+
+          <ColumnContainer gap='md'>
+            <Title titleName='Discover Scanners'/>
+            <HorizoantalScroll>
+              <React.Fragment>
+                <Scanner/>
+                <Scanner/>
+                <Scanner/>
+                <Scanner/>
+                <Scanner/>
+                <Scanner/>
+                <Scanner/>
+              </React.Fragment>
+            </HorizoantalScroll>
+          </ColumnContainer>
+
+          <ColumnContainer gap='md'>
+            <Title titleName='All Stocks'/>
+            <HorizoantalScroll>
+              <React.Fragment>
+                <Stock/>
+                <Stock/>
+                <Stock/>
+                <Stock/>
+                <Stock/>
+              </React.Fragment>
+            </HorizoantalScroll>
+          </ColumnContainer>
         </ColumnContainer>
         <ColumnContainer width='20%' style={{minWidth: '374px'}}>
           <SidePanel/>

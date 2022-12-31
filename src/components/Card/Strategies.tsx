@@ -12,7 +12,7 @@ interface Props {
 const Wrapper = styled.div`
     display: flex;
     flex-direction: column;
-    max-width: 244px;
+    min-width: 244px;
     background-color: #FFFFFF;
     border-radius: 16px;
 `
