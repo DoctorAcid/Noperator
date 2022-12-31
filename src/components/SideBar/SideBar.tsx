@@ -214,8 +214,8 @@ const SideBar = () => {
         </Listing>
 
         <BottomSection>
-            <SecondaryButton size='md' style={{padding: '4px 16px', borderRadius: '16px'}}>
-                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <SecondaryButton size='md' borderRadius='lg'>
+                <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_306_1382)">
                     <path d="M33.9479 10H15.3335L6.00391 19.996L15.3335 29.992L34.0001 10" fill="#F6461A"/>
                     <path opacity="0.7" d="M24.6245 20.0001L33.8782 29.9147H15.3335L24.6245 20.0001Z" fill="#F6461A"/>

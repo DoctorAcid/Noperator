@@ -30,7 +30,9 @@ table tr th:first-child{
 table tbody tr th {
     width: max-content;
     padding: 8px 24px;
-    color: #495057;
+    color: #6C757D;
+    text-align: -webkit-right;
+    text-align: -moz-right;
 }
 
 .first_child tr th {

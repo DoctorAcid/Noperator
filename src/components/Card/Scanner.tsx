@@ -14,7 +14,7 @@ const Wrapper = styled(ColumnContainer)`
 `
 
 const P = styled.p`
-    color: #495057;
+    color: #6C757D;
     text-transform: capitalize;
 `
 

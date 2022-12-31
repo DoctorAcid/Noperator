@@ -10,6 +10,7 @@ import UniImg from '../../images/stocks/unilever.png'
 import AirImg from '../../images/stocks/airtel.png'
 import HeroImg from '../../images/stocks/hero.png'
 import TataImg from '../../images/stocks/tata.png'
+import { Tag } from '../TagContainer'
 
 
 const TableBody = styled.div`
@@ -67,7 +68,7 @@ const Table = () => {
                         <th scope='col'>P&L</th>
                     </tr>
                 </thead>
-                <tbody className='first_child'>
+                <tbody>
                     <tr>
                         <th scope='col'>
                             <RowContainer gap='sm'>
@@ -79,7 +80,7 @@ const Table = () => {
                         </th>
                         <th scope='col'>10,000</th>
                         <th scope='col'>₹24.25</th>
-                        <th scope='col'>64.29%</th>
+                        <th scope='col'><Tag bg='#0B98E80D' color='#0B98E8'>64.29%</Tag></th>
                         <th scope='col'>+₹12,404,687.50</th>
                     </tr>
                 </tbody>
@@ -96,7 +97,7 @@ const Table = () => {
                         </th>
                         <th scope='col'>10,000</th>
                         <th scope='col'>₹24.25</th>
-                        <th scope='col'>64.29%</th>
+                        <th scope='col'><Tag bg='#0B98E80D' color='#0B98E8'>64.29%</Tag></th>
                         <th scope='col'>+₹12,404,687.50</th>
                     </tr>
                 </tbody>
@@ -113,7 +114,7 @@ const Table = () => {
                         </th>
                         <th scope='col'>10,000</th>
                         <th scope='col'>₹24.25</th>
-                        <th scope='col'>64.29%</th>
+                        <th scope='col'><Tag bg='#0B98E80D' color='#0B98E8'>64.29%</Tag></th>
                         <th scope='col'>+₹12,404,687.50</th>
                     </tr>
                 </tbody>
@@ -130,7 +131,7 @@ const Table = () => {
                         </th>
                         <th scope='col'>10,000</th>
                         <th scope='col'>₹24.25</th>
-                        <th scope='col'>64.29%</th>
+                        <th scope='col'><Tag bg='#0B98E80D' color='#0B98E8'>64.29%</Tag></th>
                         <th scope='col'>+₹12,404,687.50</th>
                     </tr>
                 </tbody>
@@ -147,7 +148,7 @@ const Table = () => {
                         </th>
                         <th scope='col'>10,000</th>
                         <th scope='col'>₹24.25</th>
-                        <th scope='col'>64.29%</th>
+                        <th scope='col'><Tag bg='#0B98E80D' color='#0B98E8'>64.29%</Tag></th>
                         <th scope='col'>+₹12,404,687.50</th>
                     </tr>
                 </tbody>

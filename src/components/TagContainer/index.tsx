@@ -8,6 +8,7 @@ export const Tag  = styled(RowContainer)<{
     color?: string
     tt?: string
 }>`
+    display: flex;
     width: max-content;
     padding: 4px 12px;
     border-radius: 8px;

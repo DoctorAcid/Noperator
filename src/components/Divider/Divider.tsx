@@ -7,6 +7,15 @@ export const HDivLine = styled.div`
     background-color: #F8F9FA;
 `
 
+export const GrayVDivLine = styled.div<{
+    height: string
+}>`
+    display: flex;
+    height: ${({height}) => (height ? height : '100%')};
+    width: 2px;
+    background-color: #F8F9FA;
+`
+
 export const VDivLine = styled.div<{
     height?: string
 }>`

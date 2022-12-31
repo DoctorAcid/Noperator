@@ -7,7 +7,10 @@ import RowContainer from '../RowContainer/RowContainer'
 
 interface Props {
     titleName: string
+    filterOff?: boolean
+    viewallOff?: boolean
 }
+
 
 const H3 = styled.h3`
     text-transform: uppercase;
@@ -18,7 +21,7 @@ const H3 = styled.h3`
 `
 
 
-const Title = ({titleName}: Props) => {
+const Title = ({titleName, filterOff, viewallOff }: Props) => {
   return (
     <RowContainer justify='sb'>
         <RowContainer gap='md'>
@@ -33,8 +36,12 @@ const Title = ({titleName}: Props) => {
             </IconContainer>
         </RowContainer>
         <RowContainer width='fit-content' gap='md'>
-            <SecondaryButton size='md' width='max-content'>Filters</SecondaryButton>
-            <ThirdyButton size='md' width='max-content'>View all</ThirdyButton>
+            {!filterOff ? (
+                <SecondaryButton size='md' width='max-content'>Filters</SecondaryButton>
+            ) : null}
+            {!viewallOff ? (
+                <ThirdyButton size='md' width='max-content'>View all</ThirdyButton>
+            ) : null}
         </RowContainer>
     </RowContainer>
   )
