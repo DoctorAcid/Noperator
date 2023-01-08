@@ -19,9 +19,10 @@ const Wrapper = styled(FlexWrap)`
   padding: 24px;
   border: 1px solid white;
   cursor: pointer;
-  transition: border ease-in 0.3s;
+  transition: all ease-in 0.3s;
   &:hover {
-    border: 1px solid #2daf80;
+    transform: scale(1.01);
+    box-shadow: 8px 8px 40px 0px #0000000d;
   }
 `;
 

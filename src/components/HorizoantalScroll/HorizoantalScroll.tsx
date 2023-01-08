@@ -64,6 +64,7 @@ const HorizontalWrap = styled.div`
   gap: 16px;
   overflow-x: hidden;
   width: 100%;
+  padding: 20px 20px 34px 20px;
 `;
 
 const ArrowButtons = styled(RowContainer)`

@@ -15,9 +15,10 @@ const Wrapper = styled.div`
   background: #fff;
   border: 1px solid white;
   cursor: pointer;
-  transition: border ease-in 0.3s;
+  transition: all ease-in 0.3s;
   &:hover {
-    border: 1px solid #f8f9fa;
+    transform: scale(1.02);
+    box-shadow: 8px 8px 40px 0px #0000000d;
   }
 `;
 
