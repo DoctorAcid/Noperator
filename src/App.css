@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Roboto:wght@400;700;900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,14 +8,14 @@
   font-family: inter, sans-serif;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #0B98E8 #FFFFFF;
+  scrollbar-color: #0b98e8 #ffffff;
 }
 
 .App {
   display: flex;
   width: 100vw;
   height: 100vh;
-  background-color: #F3F8FA;
+  background-color: #f3f8fa;
   overflow: hidden;
 }
 
@@ -23,33 +23,33 @@ h1 {
   font-size: 32px;
   font-weight: 900;
   text-transform: uppercase;
-  color: #6C757D;
+  color: #6c757d;
 }
 
-h2{
+h2 {
   font-size: 24px;
   font-weight: 900;
-  color: #6C757D;
+  color: #6c757d;
   text-transform: uppercase;
 }
 
-h3{
+h3 {
   font-size: 20px;
   font-weight: 700;
-  color: #6C757D;
+  color: #6c757d;
   text-transform: capitalize;
 }
 
 p {
   font-family: Roboto, sans-serif;
   font-weight: 700;
-  color: #ADB5BD;
+  color: #adb5bd;
 }
 
-.name_tag{
+.name_tag {
   font-weight: 700;
   text-transform: uppercase;
-  color: #6C757D;
+  color: #6c757d;
 }
 
 ::-webkit-scrollbar {
@@ -60,15 +60,15 @@ p {
 ::-webkit-scrollbar-track {
   margin-block: 0.5em;
   border-radius: 6px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ADB5BD;
+  background: #adb5bd;
   border-radius: 6px;
   cursor: pointer;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #0B98E8;
+  background: #0b98e8;
 }
