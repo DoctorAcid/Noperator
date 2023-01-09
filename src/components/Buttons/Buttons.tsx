@@ -3,9 +3,6 @@ import styled from "styled-components";
 const Base = styled.button<{
   width?: string;
   size?: "sm" | "md" | "lg";
-  padding?: "sm" | "md" | "lg";
-  borderRadius?: "sm" | "md" | "lg";
-  fontSize?: "sm" | "md" | "lg";
   altDisabledStyle?: boolean;
 }>`
   width: ${({ width }) => (width ? width : "max-content")};
@@ -72,4 +69,18 @@ export const ThirdyButton = styled(Base)`
   &:hover {
     color: #0b98e8;
   }
+`;
+
+export const OutlineButton = styled(Base)<{
+  color: string;
+  padding?: string;
+  borderRadius?: string;
+}>`
+  width: max-content;
+  border: 2px solid ${({ color }) => (color ? color : "")};
+  color: ${({ color }) => (color ? color : "")};
+  padding: ${({ padding }) => (padding ? padding : "")};
+  border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : "")};
+  background-color: transparent;
+  text-transform: capitalize;
 `;
