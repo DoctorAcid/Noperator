@@ -9,13 +9,47 @@ interface Props {
   children: React.ReactElement;
 }
 
-const RShader = styled.div`
+const ScrollWrap = styled.div`
+  position: relative;
+  width: 100%;
+  z-index: 0;
+`;
+
+const HorizontalWrap = styled.div`
+  position: absolute;
   display: flex;
-  justify-content: flex-end;
+  gap: 16px;
+  overflow-x: hidden;
+  width: 100%;
+  padding: 20px 40px 40px 0;
+  margin: -20px -40px -40px 0;
+`;
+
+const RGradient = styled.div`
+  display: flex;
+  justify-content: center;
   align-items: center;
   position: absolute;
   right: 0;
   width: 80px;
+  z-index: 1;
+`;
+
+const LGradient = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 80px;
+  z-index: 1;
+`;
+
+const RShader = styled.div`
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 100%;
   z-index: 1;
   background: linear-gradient(
     270deg,
@@ -25,8 +59,11 @@ const RShader = styled.div`
 `;
 
 const LShader = styled(RShader)`
-  left: 0;
-  justify-content: flex-start;
+  position: absolute;
+  right: 0;
+  top: -20px;
+  width: 100%;
+  z-index: 1;
   background: linear-gradient(
     90deg,
     #f3f8fa 33.33%,
@@ -53,31 +90,9 @@ const Arrow = styled(SecondaryButton)`
   }
 `;
 
-const ScrollWrap = styled.div`
-  position: relative;
-  width: 100%;
-`;
-
-const HorizontalWrap = styled.div`
-  position: absolute;
-  display: flex;
-  gap: 16px;
-  overflow-x: hidden;
-  width: 100%;
-  padding: 20px 20px 34px 20px;
-`;
-
-const ArrowButtons = styled(RowContainer)`
-  position: absolute;
-  right: 0;
-  gap: 8px;
-  width: max-content;
-  z-index: 2;
-  transform: translateY(180%);
-`;
-
 const HorizoantalScroll = ({ children }: Props) => {
   const [height, setHeight] = useState("");
+  const [shaderHeight, setShaderHeight] = useState("");
   const [isScroll, setIsScroll] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -85,8 +100,10 @@ const HorizoantalScroll = ({ children }: Props) => {
 
   useEffect(() => {
     checkScroll();
-    const height = String(Number(getHeight()) + 2) + "px";
+    const height = String(getHeight()) + "px";
+    const shaderHeight = String(Number(getHeight()) - 60) + "px";
     setHeight(height);
+    setShaderHeight(shaderHeight);
   });
 
   function getHeight() {
@@ -161,13 +178,18 @@ const HorizoantalScroll = ({ children }: Props) => {
     }
   };
   return (
-    <ScrollWrap style={{ height: height ? height : "" }}>
-      <RShader
+    <ScrollWrap style={{ height: shaderHeight ? shaderHeight : "" }}>
+      <RGradient
         style={{
-          height: height ? height : "",
+          height: shaderHeight ? shaderHeight : "",
           display: isScroll ? "flex" : "none",
         }}
       >
+        <RShader
+          style={{
+            height: height ? height : "",
+          }}
+        />
         <Arrow onClick={() => scrollR()}>
           <svg
             width="24"
@@ -184,13 +206,18 @@ const HorizoantalScroll = ({ children }: Props) => {
             />
           </svg>
         </Arrow>
-      </RShader>
-      <LShader
+      </RGradient>
+      <LGradient
         style={{
-          height: height ? height : "",
+          height: shaderHeight ? shaderHeight : "",
           display: scrolled ? "flex" : "none",
         }}
       >
+        <LShader
+          style={{
+            height: height ? height : "",
+          }}
+        />
         <Arrow onClick={() => scrollL()}>
           <svg
             width="24"
@@ -207,7 +234,7 @@ const HorizoantalScroll = ({ children }: Props) => {
             />
           </svg>
         </Arrow>
-      </LShader>
+      </LGradient>
       <HorizontalWrap ref={ref}>{children}</HorizontalWrap>
     </ScrollWrap>
   );
