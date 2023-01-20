@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import { SecondaryButton, ThirdyButton } from "../Buttons/Buttons";
+import {
+  PrimaryButton,
+  SecondaryButton,
+  ThirdyButton,
+} from "../Buttons/Buttons";
 import ColumnContainer from "../ColumnContainer/ColumnContainer";
 import IconContainer from "../IconContainer/IconContainer";
 import RowContainer from "../RowContainer/RowContainer";
@@ -9,6 +13,8 @@ interface Props {
   titleName: string;
   filterOff?: boolean;
   viewallOff?: boolean;
+  primaryButton?: string;
+  secondryButton?: string;
 }
 
 const H3 = styled.h3`
@@ -19,7 +25,13 @@ const H3 = styled.h3`
   }
 `;
 
-const Title = ({ titleName, filterOff, viewallOff }: Props) => {
+const Title = ({
+  titleName,
+  filterOff,
+  viewallOff,
+  primaryButton,
+  secondryButton,
+}: Props) => {
   return (
     <RowContainer justify="sb">
       <RowContainer gap="md">
@@ -46,7 +58,7 @@ const Title = ({ titleName, filterOff, viewallOff }: Props) => {
           </svg>
         </IconContainer>
       </RowContainer>
-      <RowContainer width="fit-content" gap="md">
+      <RowContainer width="fit-content" gap="sm">
         {!filterOff ? (
           <SecondaryButton size="md" width="max-content">
             Filters
@@ -56,6 +68,16 @@ const Title = ({ titleName, filterOff, viewallOff }: Props) => {
           <ThirdyButton size="md" width="max-content">
             View all
           </ThirdyButton>
+        ) : null}
+        {primaryButton ? (
+          <PrimaryButton size="md" width="max-content">
+            {primaryButton}
+          </PrimaryButton>
+        ) : null}
+        {secondryButton ? (
+          <SecondaryButton size="md" width="max-content">
+            {secondryButton}
+          </SecondaryButton>
         ) : null}
       </RowContainer>
     </RowContainer>

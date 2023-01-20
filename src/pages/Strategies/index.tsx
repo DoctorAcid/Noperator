@@ -13,7 +13,7 @@ import PageWrapper from "../../components/PageWrapper";
 import Title from "../../components/Title/Title";
 
 const Strategies = () => {
-  const [strategy, setStrategy] = useState(false);
+  const [strategy, setStrategy] = useState(true);
   return (
     <PageWrapper
       header={<Header title="Stragtegies" />}
