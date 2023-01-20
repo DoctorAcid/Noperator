@@ -32,7 +32,7 @@ const Title = ({
   secondryButton,
 }: Props) => {
   return (
-    <RowContainer justify="sb">
+    <RowContainer style={{ zIndex: "1" }} justify="sb">
       <RowContainer gap="md">
         <H3>{titleName}</H3>
         <IconContainer size="sm">

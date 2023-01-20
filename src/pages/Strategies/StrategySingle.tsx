@@ -17,6 +17,7 @@ import MinimalInfo from "../../components/Card/MinimalInfo";
 import { FlexWrap } from "../../components/FlexWrap";
 import chart from "../../images/Chart/chart.png";
 import Table from "../../components/Table/Table";
+import SidePanel from "../../components/SidePanel/SidePanel";
 
 const BacktestTitle = styled(RowContainer)`
   padding: 12px 16px;
@@ -294,7 +295,7 @@ const StrategySingle = () => {
           </ColumnContainer>
         </React.Fragment>
       }
-      sidepanel={<></>}
+      sidepanel={<SidePanel />}
     ></PageWrapper>
   );
 };
