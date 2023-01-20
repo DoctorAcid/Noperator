@@ -97,7 +97,7 @@ const HorizoantalScroll = ({ children }: Props) => {
 
   useEffect(() => {
     checkScroll();
-  }, []);
+  });
 
   useEffect(() => {
     const height = String(getHeight()) + "px";
