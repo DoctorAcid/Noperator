@@ -1,9 +1,6 @@
-import { truncate } from "fs";
 import React, { useState, useRef, useEffect } from "react";
 import styled from "styled-components";
-import { flattenDiagnosticMessageText } from "typescript";
 import { SecondaryButton } from "../Buttons/Buttons";
-import RowContainer from "../RowContainer/RowContainer";
 
 interface Props {
   children: React.ReactElement;
@@ -104,7 +101,7 @@ const HorizoantalScroll = ({ children }: Props) => {
     const shaderHeight = String(Number(getHeight()) - 60) + "px";
     setHeight(height);
     setShaderHeight(shaderHeight);
-  });
+  }, [checkScroll]);
 
   function getHeight() {
     if (ref.current) {

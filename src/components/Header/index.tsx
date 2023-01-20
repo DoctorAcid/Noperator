@@ -78,7 +78,7 @@ const Header = ({ title, description, backButton }: Props) => {
 
       <RowContainer gap="lg" width="max-content">
         <NotificationButton notification={2} />
-        {url != "/" ? (
+        {url !== "/" ? (
           <ImageContainer>
             <img width={48} src={avatarImg} alt="avatar" />
           </ImageContainer>

@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import ColumnContainer from "../ColumnContainer/ColumnContainer";
-import IconContainer from "../IconContainer/IconContainer";
 import RowContainer from "../RowContainer/RowContainer";
 import HeroImg from "../../images/stocks/hero.png";
 import { StockIcons } from "../StockIcons/StockIcons";
@@ -40,7 +39,7 @@ const Stock = () => {
     <Wrapper>
       <RowContainer gap="sm">
         <StockIcons>
-          <img src={HeroImg} />
+          <img src={HeroImg} alt="" />
         </StockIcons>
         <ColumnContainer>
           <span className="name_tag">hero motors</span>

@@ -6,9 +6,7 @@ import {
   ThirdyButton,
 } from "../Buttons/Buttons";
 import RowContainer from "../RowContainer/RowContainer";
-import ColumnContainer from "../ColumnContainer/ColumnContainer";
 import "./table.css";
-import IconContainer from "../IconContainer/IconContainer";
 import AdaniImg from "../../images/stocks/adani.png";
 import UniImg from "../../images/stocks/unilever.png";
 import AirImg from "../../images/stocks/airtel.png";
@@ -51,7 +49,7 @@ const Table = ({ title, filter }: Props) => {
   useEffect(() => {
     const height = getTableHeight() + "px";
     setHeight(height);
-  });
+  }, []);
 
   function getTableHeight() {
     if (ref.current && topSection.current) {
@@ -107,7 +105,7 @@ const Table = ({ title, filter }: Props) => {
               <th scope="col">
                 <RowContainer gap="sm">
                   <StockImg>
-                    <img src={AdaniImg} />
+                    <img src={AdaniImg} alt="" />
                   </StockImg>
                   <span className="name_tag">ADANIPORTS22NOV800PE</span>
                 </RowContainer>
@@ -128,7 +126,7 @@ const Table = ({ title, filter }: Props) => {
               <th scope="col">
                 <RowContainer gap="sm">
                   <StockImg>
-                    <img src={TataImg} />
+                    <img src={TataImg} alt="" />
                   </StockImg>
                   <span>TATAMOTORS22NOV564AE</span>
                 </RowContainer>
@@ -149,7 +147,7 @@ const Table = ({ title, filter }: Props) => {
               <th scope="col">
                 <RowContainer gap="sm">
                   <StockImg>
-                    <img src={HeroImg} />
+                    <img src={HeroImg} alt="" />
                   </StockImg>
                   <span>HEROMOTORS22SEP212SG</span>
                 </RowContainer>
@@ -170,7 +168,7 @@ const Table = ({ title, filter }: Props) => {
               <th scope="col">
                 <RowContainer gap="sm">
                   <StockImg>
-                    <img src={UniImg} />
+                    <img src={UniImg} alt="" />
                   </StockImg>
                   <span>UNILIVER22AUG80036ED</span>
                 </RowContainer>
@@ -191,7 +189,7 @@ const Table = ({ title, filter }: Props) => {
               <th scope="col">
                 <RowContainer gap="sm">
                   <StockImg>
-                    <img src={AirImg} />
+                    <img src={AirImg} alt="" />
                   </StockImg>
                   <span>BHRATIAIRTEL22NOV505SP</span>
                 </RowContainer>

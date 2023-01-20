@@ -5,7 +5,6 @@ import {
   SecondaryButton,
   ThirdyButton,
 } from "../Buttons/Buttons";
-import ColumnContainer from "../ColumnContainer/ColumnContainer";
 import IconContainer from "../IconContainer/IconContainer";
 import RowContainer from "../RowContainer/RowContainer";
 

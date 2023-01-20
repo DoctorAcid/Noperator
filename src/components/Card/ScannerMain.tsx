@@ -1,12 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import {
-  PrimaryButton,
-  SecondaryButton,
-  ThirdyButton,
-} from "../Buttons/Buttons";
+import { PrimaryButton, ThirdyButton } from "../Buttons/Buttons";
 import ColumnContainer from "../ColumnContainer/ColumnContainer";
-import { HDivLine } from "../Divider/Divider";
 import { FlexWrap } from "../FlexWrap";
 import IconContainer from "../IconContainer/IconContainer";
 import RowContainer from "../RowContainer/RowContainer";

@@ -41,7 +41,7 @@ const StockMain = () => {
       <TopSection>
         <IconContainer size="lg">
           <StockIcons>
-            <img width={"48px"} src={HeroImg} />
+            <img width={"48px"} src={HeroImg} alt="" />
           </StockIcons>
         </IconContainer>
         <motion.h3

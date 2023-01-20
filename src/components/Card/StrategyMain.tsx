@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { ThirdyButton } from "../Buttons/Buttons";
 import ColumnContainer from "../ColumnContainer/ColumnContainer";
@@ -62,19 +62,19 @@ const StrategyMain = () => {
         <RowContainer padding="16px 0 0 0" justify="sb">
           <RowContainer gap="sm">
             <StockIcons>
-              <img src={AdaniImg} />
+              <img src={AdaniImg} alt="" />
             </StockIcons>
             <StockIcons>
-              <img src={UniImg} />
+              <img src={UniImg} alt="" />
             </StockIcons>
             <StockIcons>
-              <img src={AirImg} />
+              <img src={AirImg} alt="" />
             </StockIcons>
             <StockIcons>
-              <img src={HeroImg} />
+              <img src={HeroImg} alt="" />
             </StockIcons>
             <StockIcons>
-              <img src={TataImg} />
+              <img src={TataImg} alt="" />
             </StockIcons>
           </RowContainer>
           <Tag bg="#FFC8491A" color="#FFC849">

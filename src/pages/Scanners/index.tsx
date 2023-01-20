@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CreationCont from "../../components/Card/CreationCont";
 import Scanner from "../../components/Card/Scanner";
 import ScannerMain from "../../components/Card/ScannerMain";
 import SidePanel from "../../components/Card/SidePanel";
-import StrategyMain from "../../components/Card/StrategyMain";
 import ColumnContainer from "../../components/ColumnContainer/ColumnContainer";
 import Header from "../../components/Header";
 import HorizoantalScroll from "../../components/HorizoantalScroll/HorizoantalScroll";
@@ -14,6 +13,10 @@ import Title from "../../components/Title/Title";
 
 const Scanners = () => {
   const [scanner, setScanner] = useState(false);
+  useEffect(() => {
+    setScanner(true);
+  }, []);
+
   return (
     <PageWrapper
       header={<Header title="Scanners" />}

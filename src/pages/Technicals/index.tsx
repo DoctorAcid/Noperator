@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
 import CreationCont from "../../components/Card/CreationCont";
 import SidePanel from "../../components/Card/SidePanel";
 import Strategy from "../../components/Card/Strategy";
@@ -14,6 +13,11 @@ import Title from "../../components/Title/Title";
 
 const Technicals = () => {
   const [strategy, setStrategy] = useState(false);
+
+  useEffect(() => {
+    setStrategy(true);
+  }, []);
+
   return (
     <PageWrapper
       header={<Header title="Technicals" />}

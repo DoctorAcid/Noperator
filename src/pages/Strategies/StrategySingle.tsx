@@ -49,7 +49,6 @@ const StrategySingle = () => {
     if (textContainer.current) {
       const height = textContainer.current.offsetHeight;
       if (height > 96) {
-        console.log(height);
         setToggleButton(true);
         setReadMore(true);
       }
@@ -152,7 +151,7 @@ const StrategySingle = () => {
                 <RowContainer gap="md">
                   <IconContainer size="md">
                     <StockIcons>
-                      <img src={HeroImg} />
+                      <img src={HeroImg} alt="" />
                     </StockIcons>
                   </IconContainer>
                   <H3>hero motors</H3>
