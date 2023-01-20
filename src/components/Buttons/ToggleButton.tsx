@@ -33,7 +33,6 @@ const ToggleButton = ({ switchButton, setSwitchButton }: Props) => {
     setTimeout(() => {
       setWidth("20px");
     }, 100);
-    console.log("clicked");
   }, [switchButton]);
 
   return (
