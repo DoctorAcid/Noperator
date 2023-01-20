@@ -58,16 +58,6 @@ const Title = ({
         </IconContainer>
       </RowContainer>
       <RowContainer width="fit-content" gap="sm">
-        {!filterOff ? (
-          <SecondaryButton size="md" width="max-content">
-            Filters
-          </SecondaryButton>
-        ) : null}
-        {!viewallOff ? (
-          <ThirdyButton size="md" width="max-content">
-            View all
-          </ThirdyButton>
-        ) : null}
         {primaryButton ? (
           <PrimaryButton size="md" width="max-content">
             {primaryButton}
@@ -77,6 +67,16 @@ const Title = ({
           <SecondaryButton size="md" width="max-content">
             {secondryButton}
           </SecondaryButton>
+        ) : null}
+        {!filterOff ? (
+          <SecondaryButton size="md" width="max-content">
+            Filters
+          </SecondaryButton>
+        ) : null}
+        {!viewallOff ? (
+          <ThirdyButton size="md" width="max-content">
+            View all
+          </ThirdyButton>
         ) : null}
       </RowContainer>
     </RowContainer>
