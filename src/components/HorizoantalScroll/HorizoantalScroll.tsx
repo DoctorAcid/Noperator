@@ -101,7 +101,7 @@ const HorizoantalScroll = ({ children }: Props) => {
     const shaderHeight = String(Number(getHeight()) - 60) + "px";
     setHeight(height);
     setShaderHeight(shaderHeight);
-  }, [checkScroll]);
+  }, []);
 
   function getHeight() {
     if (ref.current) {
