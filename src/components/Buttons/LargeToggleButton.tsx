@@ -46,7 +46,7 @@ const LargeToggleButton = ({ content }: Props) => {
       }
       return setToggleItems(newArray);
     });
-  }, []);
+  }, [content, newArray]);
 
   const setActive = (index: number) => {
     setToggleItems(
