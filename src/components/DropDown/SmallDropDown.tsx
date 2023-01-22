@@ -62,7 +62,7 @@ const SmallDropDown = ({ dropDownContent }: Props) => {
       }
       return setDropDownContent(newArray);
     });
-  }, [dropDownContent && newArray]);
+  }, []);
 
   const getDropDownContent = (index: number) => {
     setDropDownContent(
@@ -93,7 +93,7 @@ const SmallDropDown = ({ dropDownContent }: Props) => {
           if (items.active) {
             return items.content;
           }
-          return items.content;
+          return "";
         })}
         <IconContainer
           animate={{ rotate: dropDown ? "-180deg" : "0" }}
@@ -129,7 +129,7 @@ const SmallDropDown = ({ dropDownContent }: Props) => {
                 </Span>
               );
             }
-            return;
+            return "";
           })}
         </>
       </ColumnContainer>
