@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import ColumnContainer from "../ColumnContainer/ColumnContainer";
 
@@ -39,15 +39,6 @@ const LargeDropDown = ({ title, elements, openStatus }: Props) => {
   const wrap = useRef<HTMLDivElement>(null);
 
   const [open, setOpen] = useState(openStatus ? openStatus : false);
-  const [contentHeight, setContentHeight] = useState("100%");
-
-  useLayoutEffect(() => {
-    if (wrap.current) {
-      const height = wrap.current.offsetHeight + 96;
-      const fullHeight = String(height) + "px";
-      setContentHeight(fullHeight);
-    }
-  });
 
   return (
     <Wrapper animate={{ height: open ? "100%" : "72px" }}>

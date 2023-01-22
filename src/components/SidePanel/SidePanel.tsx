@@ -6,7 +6,6 @@ import LargeToggleButton from "../Buttons/LargeToggleButton";
 import ColumnContainer from "../ColumnContainer/ColumnContainer";
 import LargeDropDown from "../DropDown/LargeDropDown";
 import SmallDropDown from "../DropDown/SmallDropDown";
-import IconContainer from "../IconContainer/IconContainer";
 import RowContainer from "../RowContainer/RowContainer";
 
 const Wrapper = styled(motion.div)`
