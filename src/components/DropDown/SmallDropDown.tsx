@@ -62,7 +62,7 @@ const SmallDropDown = ({ dropDownContent }: Props) => {
       }
       return setDropDownContent(newArray);
     });
-  }, [null]);
+  }, [dropDownContent, newArray]);
 
   const getDropDownContent = (index: number) => {
     setDropDownContent(
