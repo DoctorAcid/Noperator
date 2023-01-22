@@ -32,7 +32,7 @@ const Base = styled.button<{
   transition: transform 450ms ease;
   transform: perspective(1px) translateZ(0);
   &:hover {
-    transform: scale(1.04);
+    transform: scale(1.02);
   }
 `;
 
