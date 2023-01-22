@@ -34,9 +34,9 @@ const ContentWrapper = styled(motion.div)`
 const LargeToggleButton = ({ content }: Props) => {
   const [toggleItems, setToggleItems] = useState<ToggleProps[]>([]);
 
-  const newArray: ToggleProps[] = [];
-
   useEffect(() => {
+    const newArray: ToggleProps[] = [];
+
     content.map((items, index) => {
       if (index === 0) {
         newArray.push({ id: index, element: items, active: true });
@@ -46,7 +46,7 @@ const LargeToggleButton = ({ content }: Props) => {
       }
       return setToggleItems(newArray);
     });
-  }, [content, newArray]);
+  }, [content]);
 
   const setActive = (index: number) => {
     setToggleItems(

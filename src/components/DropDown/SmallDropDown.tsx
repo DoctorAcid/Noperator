@@ -50,9 +50,9 @@ const SmallDropDown = ({ dropDownContent }: Props) => {
   const [dropDown, setDropDown] = useState(false);
   const [DropDownContent, setDropDownContent] = useState<DropDownProps[]>([]);
 
-  const newArray: DropDownProps[] = [];
-
   useEffect(() => {
+    const newArray: DropDownProps[] = [];
+
     dropDownContent.map((items, index) => {
       if (index === 0) {
         newArray.push({ id: index, content: items, active: true });
@@ -62,7 +62,7 @@ const SmallDropDown = ({ dropDownContent }: Props) => {
       }
       return setDropDownContent(newArray);
     });
-  }, [dropDownContent, newArray]);
+  }, [dropDownContent]);
 
   const getDropDownContent = (index: number) => {
     setDropDownContent(
