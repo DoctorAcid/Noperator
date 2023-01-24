@@ -27,6 +27,11 @@ const Base = styled.button<{
     (size === "md" && "8px") ||
     (size === "lg" && "16px")};
   cursor: pointer;
+  min-width: ${({ size, width }) =>
+    (width ? width : "") ||
+    (size === "sm" && "96px") ||
+    (size === "md" && "116px") ||
+    (size === "lg" && "100%")};
   font-weight: 700;
   will-change: transform;
   transition: transform 450ms ease;

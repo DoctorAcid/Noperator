@@ -11,12 +11,12 @@ const IconContainer = styled(motion.div)<{
   border-radius: ${({ borderRadius }) => (borderRadius ? borderRadius : "")};
   width: ${({ size }) =>
     (size === "sm" && "24px") ||
-    (size === "md" && "40px") ||
+    (size === "md" && "48px") ||
     (size === "lg" && "64px") ||
     (size === "xl" && "96px")};
   height: ${({ size }) =>
     (size === "sm" && "24px") ||
-    (size === "md" && "40px") ||
+    (size === "md" && "48px") ||
     (size === "lg" && "64px") ||
     (size === "xl" && "96px")};
 `;

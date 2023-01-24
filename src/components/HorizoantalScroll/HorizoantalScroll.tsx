@@ -24,7 +24,7 @@ const HorizontalWrap = styled.div`
 
 const RGradient = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   position: absolute;
   right: 0;
@@ -34,7 +34,7 @@ const RGradient = styled.div`
 
 const LGradient = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   position: absolute;
   left: 0;
@@ -73,6 +73,7 @@ const Arrow = styled(SecondaryButton)`
   width: 56px;
   height: 56px;
   border-radius: 16px;
+  box-shadow: 20px 20px 60px 0px #0000000d;
 
   &:hover svg path {
     fill: #0b98e8;

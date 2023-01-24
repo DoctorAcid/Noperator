@@ -1,12 +1,14 @@
-import React from 'react'
-import styled from 'styled-components'
-import ColumnContainer from '../ColumnContainer/ColumnContainer'
-import RowContainer from '../RowContainer/RowContainer'
+import { motion } from "framer-motion";
+import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import useMediaQuery from "../../custom hooks/useMediaQuery";
+import ColumnContainer from "../ColumnContainer/ColumnContainer";
+import RowContainer from "../RowContainer/RowContainer";
 
 interface Props {
-    header: React.ReactElement
-    content: React.ReactElement
-    sidepanel: React.ReactElement
+  header: React.ReactElement;
+  content: React.ReactElement;
+  sidepanel: React.ReactElement;
 }
 
 const Wrapper = styled.div`
@@ -19,24 +21,30 @@ const Wrapper = styled.div`
   justify-content: flex-start;
   padding: 32px;
   overflow-y: auto;
-`
+`;
 
-const PageWrapper = ({header, content, sidepanel} : Props) => {
+const SidePanelConteiner = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  min-width: 374px;
+  @media (max-width: 1176px) {
+    display: none;
+  }
+`;
+
+const PageWrapper = ({ header, content, sidepanel }: Props) => {
   return (
     <Wrapper>
-        <RowContainer justify='sb' align='fs'>
-            {header}
-        </RowContainer>
-        <RowContainer gap='md' align='fs'>
-            <ColumnContainer gap='32px'>
-                {content}
-            </ColumnContainer>
-            <ColumnContainer width='20%' style={{minWidth: '374px'}}>
-                {sidepanel}
-            </ColumnContainer>
-        </RowContainer>
+      <RowContainer justify="sb" align="fs">
+        {header}
+      </RowContainer>
+      <RowContainer gap="md" align="fs">
+        <ColumnContainer gap="32px">{content}</ColumnContainer>
+        <SidePanelConteiner>{sidepanel}</SidePanelConteiner>
+      </RowContainer>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default PageWrapper
+export default PageWrapper;

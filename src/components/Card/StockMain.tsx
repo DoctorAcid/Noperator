@@ -23,7 +23,7 @@ const Wrapper = styled(motion.div)`
 
 const TopSection = styled(ColumnContainer)`
   padding: 24px;
-  gap: 4px;
+  gap: 8px;
 `;
 
 const BottomSection = styled(ColumnContainer)`
@@ -39,20 +39,22 @@ const StockMain = () => {
       animate={{ backgroundColor: active ? "#0B98E8" : "#fff" }}
     >
       <TopSection>
-        <IconContainer size="lg">
+        <IconContainer size="md">
           <StockIcons>
             <img width={"48px"} src={HeroImg} alt="" />
           </StockIcons>
         </IconContainer>
-        <motion.h3
-          animate={{ color: active ? "#fff" : "#6c757d" }}
-          transition={{ duration: 1 }}
-        >
-          Hero Motors
-        </motion.h3>
-        <motion.p animate={{ color: active ? "#fff" : "#adb5bd" }}>
-          599.10 (+0.17%)
-        </motion.p>
+        <ColumnContainer>
+          <motion.h3
+            animate={{ color: active ? "#fff" : "#6c757d" }}
+            transition={{ duration: 1 }}
+          >
+            Hero Motors
+          </motion.h3>
+          <motion.p animate={{ color: active ? "#fff" : "#adb5bd" }}>
+            599.10 (+0.17%)
+          </motion.p>
+        </ColumnContainer>
       </TopSection>
       <motion.div
         style={{ height: "2px" }}

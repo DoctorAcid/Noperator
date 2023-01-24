@@ -7,6 +7,7 @@ import Technicals from "./pages/Technicals";
 import Scanner from "./pages/Scanners";
 import StrategySingle from "./pages/Strategies/StrategySingle";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ScannerSingle from "./pages/Scanners/ScannerSingle";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/technicals" component={Technicals} />
           <Route exact path="/scanners" component={Scanner} />
           <Route exact path="/stratrgySingle" component={StrategySingle} />
+          <Route exact path="/scannerSingle" component={ScannerSingle} />
         </Switch>
       </BrowserRouter>
       {/*API key : H6E8PTSYZS6W9R8G*/}
