@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import React, { useEffect, useRef, useState } from "react";
 import { ThirdyButton } from "../Buttons/Buttons";
-import IconContainer from "../IconContainer/IconContainer";
-import RowContainer from "../RowContainer/RowContainer";
 import ColumnContainer from "./ColumnContainer";
 
 interface Props {

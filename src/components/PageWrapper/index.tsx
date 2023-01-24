@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import useMediaQuery from "../../custom hooks/useMediaQuery";
 import ColumnContainer from "../ColumnContainer/ColumnContainer";
 import RowContainer from "../RowContainer/RowContainer";
 

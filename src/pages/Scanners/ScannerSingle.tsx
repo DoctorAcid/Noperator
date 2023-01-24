@@ -4,7 +4,6 @@ import styled from "styled-components";
 import {
   PrimaryButton,
   SecondaryButton,
-  ThirdyButton,
 } from "../../components/Buttons/Buttons";
 import SidePanel from "../../components/Card/SidePanel";
 import StockMain from "../../components/Card/StockMain";
