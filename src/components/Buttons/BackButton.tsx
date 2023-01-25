@@ -48,20 +48,10 @@ const BackWrap = styled.div`
 `;
 
 const BackButton = () => {
-  const location = useLocation();
-  const [url, setUrl] = useState("");
-
   const history = useHistory();
 
-  useEffect(() => {
-    setUrl(location.pathname);
-  }, [location]);
-
   return (
-    <BackWrap
-      onClick={() => history.goBack()}
-      style={{ display: url === "/stratrgySingle" ? "flex" : "none" }}
-    >
+    <BackWrap onClick={() => history.goBack()}>
       <svg
         width="13"
         height="24"
