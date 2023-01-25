@@ -57,9 +57,9 @@ const StockMain = () => {
         </ColumnContainer>
       </TopSection>
       <motion.div
-        style={{ height: "2px" }}
+        style={{ height: "2px", backgroundColor: "#f8f9fa" }}
         animate={{
-          backgroundColor: active ? "#F8F9FA4D" : "#f8f9fa",
+          backgroundColor: active ? "#52B4EB" : "#f8f9fa",
         }}
         transition={{ duration: 1 }}
       />
